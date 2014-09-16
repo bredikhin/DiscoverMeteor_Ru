@@ -280,7 +280,7 @@ var requireLogin = function() {
   }
 }
 
-Router.before(requireLogin, {only: 'postSubmit'});
+Router.onBeforeAction(requireLogin, {only: 'postSubmit'});
 ~~~
 <%= caption "lib/router.js" %>
 <%= highlight "16~19" %>
